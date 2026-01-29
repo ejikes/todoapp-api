@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="tasks-page">
+  <header>
+    <h1>My Todo List</h1>
+    <p>Welcome, <%= user.username %>!</p>
+  </header>
+
+  <div class="container">
+    <div class="logout">
+      <a href="/logout">Logout</a>
+    </div>
+
+    <form method="POST" action="/tasks">
+      <input name="title" placeholder="Enter task" required>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <ul>
+      <% tasks.forEach(task => { %>
+        <li class="<%= task.status %>">
+          <span><%= task.title %></span>
+          <div>
+            <% if (task.status !== 'completed') { %>
+              <button class="complete" onclick="window.location='/tasks/<%= task._id %>/complete'">Complete</button>
+            <% } %>
+            <button class="delete" onclick="window.location='/tasks/<%= task._id %>/delete'">Delete</button>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+
+</html>

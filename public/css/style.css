@@ -1,0 +1,234 @@
+/* ------------------- Global Styles ------------------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+/* ------------------- Login Page ------------------- */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+}
+
+.login-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  width: 300px;
+  text-align: center;
+}
+
+.login-container h2 {
+  color: #2575fc;
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  width: 85%;
+  padding: 10px;
+  border: none;
+  background: #2575fc;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.login-container button:hover {
+  background: #6a11cb;
+}
+
+.login-container .error {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* ------------------- Register Page ------------------- */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+}
+
+.register-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  width: 300px;
+  text-align: center;
+}
+
+.register-container h2 {
+  color: #2575fc;
+  margin-bottom: 20px;
+}
+
+.register-container input {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.register-container button {
+  width: 85%;
+  padding: 10px;
+  border: none;
+  background: #2575fc;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.register-container button:hover {
+  background: #6a11cb;
+}
+
+.register-container .error {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* ------------------- Tasks Page ------------------- */
+.tasks-page header {
+  background: #2575fc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.tasks-page header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.tasks-page header p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+.tasks-page .container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.tasks-page form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tasks-page input[name="title"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.tasks-page button {
+  padding: 10px 15px;
+  border: none;
+  background: #2575fc;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.tasks-page button:hover {
+  background: #6a11cb;
+}
+
+.tasks-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tasks-page li {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.tasks-page li.completed {
+  text-decoration: line-through;
+  color: #888;
+  background: #e0ffe0;
+}
+
+.tasks-page li.deleted {
+  text-decoration: line-through;
+  color: #ff6b6b;
+}
+
+.tasks-page li button.complete {
+  background: #28a745;
+  color: white;
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+
+.tasks-page li button.delete {
+  background: #ff6b6b;
+  color: white;
+  padding: 5px 10px;
+}
+
+.tasks-page li button:hover {
+  opacity: 0.9;
+}
+
+.tasks-page .logout {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.tasks-page .logout a {
+  color: #2575fc;
+  font-weight: bold;
+}
+
+.tasks-page .logout a:hover {
+  text-decoration: underline;
+}
+
