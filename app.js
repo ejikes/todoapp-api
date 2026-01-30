@@ -1,9 +1,9 @@
+require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
 const path =require('path')
 
-require('dotenv').config()
 
 const authRouters = require('./routes/authRoutes')
 const taskRouters = require('./routes/taskRoutes')
@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: false}))
 app.use(express.json())
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(errorHandler)
 
 app.use('/', authRouters)
 app.use('/', taskRouters)
